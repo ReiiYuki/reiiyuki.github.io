@@ -31850,55 +31850,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_Introduction2.default, null),
-	        _react2.default.createElement(
-	          _reactMaterialize.Row,
-	          { id: 'skill' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'container white' },
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'AAAA'
-	            ),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'AAAA'
-	            ),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'AAAA'
-	            ),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'AAAA'
-	            ),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'AAAA'
-	            ),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'AAAA'
-	            ),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'AAAA'
-	            ),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'AAAA'
-	            )
-	          )
-	        )
+	        _react2.default.createElement(_Introduction2.default, null)
 	      );
 	    }
 	  }]);
@@ -31998,19 +31950,62 @@
 	          _react2.default.createElement(_util.TriSection, {
 	            title: 'How good am I?',
 	            left: _react2.default.createElement(
-	              'h4',
+	              'div',
 	              null,
-	              'Kid Mai ok'
+	              _react2.default.createElement(
+	                'h4',
+	                { className: 'condensed light' },
+	                'Active'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'condensed' },
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'light' },
+	                  'More than '
+	                ),
+	                'thousand countributions',
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'light' },
+	                  ' and More than '
+	                ),
+	                '25 respositories',
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'light' },
+	                  ' (including collaborating respositories) on Github in this year'
+	                )
+	              )
 	            ),
 	            center: _react2.default.createElement(
-	              'h4',
+	              'div',
 	              null,
-	              'I don\'t Know'
+	              _react2.default.createElement(
+	                'h4',
+	                { className: 'condensed light' },
+	                'Experience'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'condensed light' },
+	                'I have experience in many programming language and many framework since 2014 such as Java , Python , C# , Prolog , C++ , Javascript , Android , React , Django , Cocos2d-X , ETC.'
+	              )
 	            ),
 	            right: _react2.default.createElement(
-	              'h4',
+	              'div',
 	              null,
-	              'Mai Bok'
+	              _react2.default.createElement(
+	                'h4',
+	                { className: 'condensed light' },
+	                'Learner'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'condensed light' },
+	                'I love to learn new thing or the thing that I didn\'t know before such as Vue.js 2 which release in this year.'
+	              )
 	            )
 	          })
 	        )
