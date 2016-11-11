@@ -31958,7 +31958,7 @@
 	            _util.ParallaxSession,
 	            {
 	              id: 'intro',
-	              img: 'src/assets/medias/images/dummy1.png'
+	              img: 'dist/medias/images/dummy1.png'
 	            },
 	            _react2.default.createElement(
 	              'div',
