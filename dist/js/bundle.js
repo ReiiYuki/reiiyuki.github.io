@@ -34867,7 +34867,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { id: 'skill' },
 	        _react2.default.createElement(
 	          _util.ParallaxSession,
 	          {
