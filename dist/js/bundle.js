@@ -34957,7 +34957,7 @@
 	            _react2.default.createElement(
 	              'h3',
 	              { className: 'condensed light' },
-	              'Developing Skill'
+	              'Programming Skill'
 	            ),
 	            _react2.default.createElement(
 	              _reactMaterialize.Row,
@@ -35057,6 +35057,20 @@
 	                  rank: 'Elementary',
 	                  value: 0.2
 	                })
+	              )
+	            ),
+	            _react2.default.createElement(
+	              _reactMaterialize.Row,
+	              null,
+	              _react2.default.createElement(
+	                'h4',
+	                { className: 'condensed light' },
+	                'Other Developing Skill'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'condensed light' },
+	                'Object-Oreinted Programming, Team Development, SQL, Design Pattern, Component-Thinking'
 	              )
 	            )
 	          )
