@@ -27272,41 +27272,85 @@
 	          ),
 	          _react2.default.createElement(
 	            'ul',
-	            { className: 'right hide-on-med-and-down' },
+	            { className: 'hide-on-med-and-down' },
 	            _react2.default.createElement(
-	              'li',
-	              null,
+	              'div',
+	              { className: 'left' },
 	              _react2.default.createElement(
-	                'a',
-	                { href: '#intro' },
-	                'Intro'
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://www.facebook.com/shou.iguru' },
+	                  _react2.default.createElement('i', { className: 'mdi mdi-facebook-box mdi-32px' })
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://github.com/ReiiYuki' },
+	                  _react2.default.createElement('i', { className: 'mdi mdi-github-circle mdi-32px' })
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://twitter.com/EagleLight96' },
+	                  _react2.default.createElement('i', { className: 'mdi mdi-twitter mdi-32px' })
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'mailto:iguru.shou.5410070@gmail.com' },
+	                  _react2.default.createElement('i', { className: 'mdi mdi-gmail mdi-32px' })
+	                )
 	              )
 	            ),
 	            _react2.default.createElement(
-	              'li',
-	              null,
+	              'div',
+	              { className: 'right' },
 	              _react2.default.createElement(
-	                'a',
-	                { href: '#skill' },
-	                'Skill'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: '#intro' },
+	                  'Intro'
+	                )
+	              ),
 	              _react2.default.createElement(
-	                'a',
-	                { href: '#project' },
-	                'Project'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: '#skill' },
+	                  'Skill'
+	                )
+	              ),
 	              _react2.default.createElement(
-	                'a',
-	                { href: '#contact' },
-	                'Contact'
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: '#project' },
+	                  'Project'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: '#contact' },
+	                  'Contact'
+	                )
 	              )
 	            )
 	          ),
