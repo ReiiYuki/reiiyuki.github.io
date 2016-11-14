@@ -27246,8 +27246,15 @@
 	      $(".button-collapse").sideNav();
 	    }
 	  }, {
+	    key: 'onClick',
+	    value: function onClick() {
+	      $('.button-collapse').sideNav('hide');
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+	
 	      return _react2.default.createElement(
 	        'nav',
 	        { className: 'transparent z-depth-0 over' },
@@ -27311,7 +27318,9 @@
 	              null,
 	              _react2.default.createElement(
 	                'a',
-	                { className: 'white-text', href: '#intro' },
+	                { className: 'white-text', href: '#intro', onClick: function onClick() {
+	                    return _this2.onClick();
+	                  } },
 	                'Intro'
 	              )
 	            ),
@@ -27320,7 +27329,9 @@
 	              null,
 	              _react2.default.createElement(
 	                'a',
-	                { className: 'white-text', href: '#skill' },
+	                { className: 'white-text', href: '#skill', onClick: function onClick() {
+	                    return _this2.onClick();
+	                  } },
 	                'Skill'
 	              )
 	            ),
@@ -27329,7 +27340,9 @@
 	              null,
 	              _react2.default.createElement(
 	                'a',
-	                { className: 'white-text', href: '#project' },
+	                { className: 'white-text', href: '#project', onClick: function onClick() {
+	                    return _this2.onClick();
+	                  } },
 	                'Project'
 	              )
 	            ),
@@ -27338,7 +27351,9 @@
 	              null,
 	              _react2.default.createElement(
 	                'a',
-	                { className: 'white-text', href: '#contact' },
+	                { className: 'white-text', href: '#contact', onClick: function onClick() {
+	                    return _this2.onClick();
+	                  } },
 	                'Contact'
 	              )
 	            )
@@ -31450,7 +31465,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".over {\n  position: absolute;\n  z-index: 999; }\n", ""]);
+	exports.push([module.id, ".over {\n  position: fixed;\n  z-index: 999; }\n", ""]);
 	
 	// exports
 
@@ -31845,7 +31860,8 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(_.Introduction, null),
-	        _react2.default.createElement(_.Skill, null)
+	        _react2.default.createElement(_.Skill, null),
+	        _react2.default.createElement(_.Project, null)
 	      );
 	    }
 	  }]);
@@ -31864,7 +31880,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.Skill = exports.Introduction = exports.Home = undefined;
+	exports.Project = exports.Skill = exports.Introduction = exports.Home = undefined;
 	
 	var _Home2 = __webpack_require__(288);
 	
@@ -31878,11 +31894,16 @@
 	
 	var _Skill3 = _interopRequireDefault(_Skill2);
 	
+	var _Project2 = __webpack_require__(306);
+	
+	var _Project3 = _interopRequireDefault(_Project2);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.Home = _Home3.default;
 	exports.Introduction = _Introduction3.default;
 	exports.Skill = _Skill3.default;
+	exports.Project = _Project3.default;
 
 /***/ },
 /* 290 */
@@ -31967,6 +31988,11 @@
 	                  { className: 'light-green-text' },
 	                  '@Kasetsart University'
 	                )
+	              ),
+	              _react2.default.createElement(
+	                'h5',
+	                { className: 'condensed light' },
+	                'I interest in Game Development, Web Development, Artificial Intelligent and Android Development'
 	              )
 	            )
 	          ),
@@ -34964,54 +34990,6 @@
 	                _reactMaterialize.Col,
 	                { m: 3 },
 	                _react2.default.createElement(_util.HalfCircleProgressItem, {
-	                  id: 'cpp',
-	                  textColor: ' indigo-text lighten-1',
-	                  color: '#9575cd',
-	                  name: 'C++',
-	                  rank: 'Average',
-	                  value: 0.4
-	                })
-	              ),
-	              _react2.default.createElement(
-	                _reactMaterialize.Col,
-	                { m: 3 },
-	                _react2.default.createElement(_util.HalfCircleProgressItem, {
-	                  id: 'cs',
-	                  textColor: ' blue-text',
-	                  color: '#42a5f5',
-	                  name: 'C#',
-	                  rank: 'Elementary',
-	                  value: 0.25
-	                })
-	              ),
-	              _react2.default.createElement(
-	                _reactMaterialize.Col,
-	                { m: 3 },
-	                _react2.default.createElement(_util.HalfCircleProgressItem, {
-	                  id: 'prolog',
-	                  textColor: ' orange-text',
-	                  color: '#ffb74d',
-	                  name: 'Prolog',
-	                  rank: 'Elementary',
-	                  value: 0.3
-	                })
-	              ),
-	              _react2.default.createElement(
-	                _reactMaterialize.Col,
-	                { m: 3 },
-	                _react2.default.createElement(_util.HalfCircleProgressItem, {
-	                  id: 'js',
-	                  textColor: ' yellow-text',
-	                  color: '#fff176',
-	                  name: 'Javascript',
-	                  rank: 'Average',
-	                  value: 0.5
-	                })
-	              ),
-	              _react2.default.createElement(
-	                _reactMaterialize.Col,
-	                { m: 3 },
-	                _react2.default.createElement(_util.HalfCircleProgressItem, {
 	                  id: 'android',
 	                  textColor: ' green-text',
 	                  color: '#64dd17',
@@ -35031,6 +35009,54 @@
 	                  rank: 'Familiar',
 	                  value: 0.75
 	                })
+	              ),
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { m: 3 },
+	                _react2.default.createElement(_util.HalfCircleProgressItem, {
+	                  id: 'cocos',
+	                  textColor: ' blue-text',
+	                  color: '#90caf9',
+	                  name: 'Cocos2d-X (JS)',
+	                  rank: 'Rarely',
+	                  value: 0.3
+	                })
+	              ),
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { m: 3 },
+	                _react2.default.createElement(_util.HalfCircleProgressItem, {
+	                  id: 'django',
+	                  textColor: ' amber-text',
+	                  color: '#ffd54f',
+	                  name: 'Django',
+	                  rank: 'Average',
+	                  value: 0.5
+	                })
+	              ),
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { m: 3 },
+	                _react2.default.createElement(_util.HalfCircleProgressItem, {
+	                  id: 'node',
+	                  textColor: 'light-green-text accent-3',
+	                  color: '#b2ff59',
+	                  name: 'Node.js',
+	                  rank: 'Rarely',
+	                  value: 0.4
+	                })
+	              ),
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { m: 3 },
+	                _react2.default.createElement(_util.HalfCircleProgressItem, {
+	                  id: 'unity',
+	                  textColor: ' blue-text',
+	                  color: '#90caf9',
+	                  name: 'Unity3D',
+	                  rank: 'Elementary',
+	                  value: 0.2
+	                })
 	              )
 	            )
 	          )
@@ -35043,6 +35069,293 @@
 	}(_react.Component);
 	
 	exports.default = Home;
+
+/***/ },
+/* 306 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactMaterialize = __webpack_require__(240);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Project = function (_Component) {
+	  _inherits(Project, _Component);
+	
+	  function Project() {
+	    _classCallCheck(this, Project);
+	
+	    return _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).apply(this, arguments));
+	  }
+	
+	  _createClass(Project, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'project' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'section light-blue darken-4 white-text' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'container' },
+	            _react2.default.createElement(
+	              'h1',
+	              { className: 'condensed light' },
+	              'Project'
+	            ),
+	            _react2.default.createElement(
+	              'h3',
+	              { className: 'condensed light' },
+	              '2014'
+	            ),
+	            _react2.default.createElement(
+	              _reactMaterialize.Row,
+	              null,
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { s: 3 },
+	                _react2.default.createElement(
+	                  'div',
+	                  { id: 'kawaii-killer', className: 'center' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'http://www.greenfoot.org/scenarios/11904' },
+	                    _react2.default.createElement('img', { src: 'dist/medias/images/kawaii-killer.png', className: 'responsive-img' }),
+	                    _react2.default.createElement(
+	                      'h5',
+	                      { className: 'center white-text condensed light' },
+	                      'Kawaii Killer'
+	                    )
+	                  )
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'h3',
+	              { className: 'condensed light' },
+	              '2015'
+	            ),
+	            _react2.default.createElement(
+	              _reactMaterialize.Row,
+	              null,
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { s: 3 },
+	                _react2.default.createElement(
+	                  'div',
+	                  { id: 'thai-flag', className: 'center' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'http://www.xn--72cg7aib8dyfra8l.com/' },
+	                    _react2.default.createElement('img', { src: 'dist/medias/images/thai-flag.png', className: 'responsive-img' }),
+	                    _react2.default.createElement(
+	                      'h5',
+	                      { className: 'center white-text condensed light' },
+	                      'Let\'s keep the national flags on the pole'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { s: 3 },
+	                _react2.default.createElement(
+	                  'div',
+	                  { id: 'saori', className: 'center' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://bitbucket.org/b5710546593/saori-assistance' },
+	                    _react2.default.createElement('img', { src: 'dist/medias/images/saori.png', className: 'responsive-img' }),
+	                    _react2.default.createElement(
+	                      'h5',
+	                      { className: 'center white-text condensed light' },
+	                      'Saori : The Assistance'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { s: 3 },
+	                _react2.default.createElement(
+	                  'div',
+	                  { id: 'dot', className: 'center' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://github.com/ReiiYuki/digitaldot' },
+	                    _react2.default.createElement('img', { src: 'dist/medias/images/dot.png', className: 'responsive-img' }),
+	                    _react2.default.createElement(
+	                      'h5',
+	                      { className: 'center white-text condensed light' },
+	                      'Digital Dot'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { s: 3 },
+	                _react2.default.createElement(
+	                  'div',
+	                  { id: 'ward', className: 'center' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'http://exceed.cpe.ku.ac.th/wiki/index.php/Exceed_12_Seat_Belt' },
+	                    _react2.default.createElement('img', { src: 'dist/medias/images/ward.jpg', className: 'responsive-img circle' }),
+	                    _react2.default.createElement(
+	                      'h5',
+	                      { className: 'center white-text condensed light' },
+	                      'Clothesline Sky Ward'
+	                    )
+	                  )
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'h3',
+	              { className: 'condensed light' },
+	              '2016'
+	            ),
+	            _react2.default.createElement(
+	              _reactMaterialize.Row,
+	              null,
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { s: 3 },
+	                _react2.default.createElement(
+	                  'div',
+	                  { id: 'warku', className: 'center' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://github.com/ReiiYuki/WarKu' },
+	                    _react2.default.createElement('img', { src: 'dist/medias/images/warku.png', className: 'responsive-img ' }),
+	                    _react2.default.createElement(
+	                      'h5',
+	                      { className: 'center white-text condensed light' },
+	                      'WarKu'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { s: 3 },
+	                _react2.default.createElement(
+	                  'div',
+	                  { id: 'cookie', className: 'center' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://github.com/b5710546232/Cookie-rising' },
+	                    _react2.default.createElement('img', { src: 'dist/medias/images/cookie.png', className: 'responsive-img ' }),
+	                    _react2.default.createElement(
+	                      'h5',
+	                      { className: 'center white-text condensed light' },
+	                      'Cookie : Rising'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { s: 3 },
+	                _react2.default.createElement(
+	                  'div',
+	                  { id: 'kebthung', className: 'center' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://github.com/ReiiYuki/kebthung' },
+	                    _react2.default.createElement('img', { src: 'dist/medias/images/kebthung.png', className: 'responsive-img ' }),
+	                    _react2.default.createElement(
+	                      'h5',
+	                      { className: 'center white-text condensed light' },
+	                      'Kebthung'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { s: 3 },
+	                _react2.default.createElement(
+	                  'div',
+	                  { id: 'pokemon', className: 'center' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://github.com/ReiiYuki/PokemonWeakDetector' },
+	                    _react2.default.createElement('img', { src: 'dist/medias/images/pokemon.png', className: 'responsive-img ' }),
+	                    _react2.default.createElement(
+	                      'h5',
+	                      { className: 'center white-text condensed light' },
+	                      'Pokemon Weak Detector'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { s: 3 },
+	                _react2.default.createElement(
+	                  'div',
+	                  { id: 'nature', className: 'center' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://github.com/ReiiYuki/WSP_BACKEND' },
+	                    _react2.default.createElement('img', { src: 'dist/medias/images/naturedrink.png', className: 'responsive-img ' }),
+	                    _react2.default.createElement(
+	                      'h5',
+	                      { className: 'center white-text condensed light' },
+	                      'Nature Drink'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _reactMaterialize.Col,
+	                { s: 3 },
+	                _react2.default.createElement(
+	                  'div',
+	                  { id: 'kem', className: 'center' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://github.com/b5710546232/KEM_KNOWLEDGE' },
+	                    _react2.default.createElement(
+	                      'h5',
+	                      { className: 'center white-text condensed light' },
+	                      'Rice Variety Suggestion System'
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Project;
+	}(_react.Component);
+	
+	exports.default = Project;
 
 /***/ }
 /******/ ]);
