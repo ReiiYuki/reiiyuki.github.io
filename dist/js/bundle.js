@@ -28037,6 +28037,7 @@
 	    key: 'readDataFromDB',
 	    value: function readDataFromDB() {
 	      (0, _mongodb.readDB)('personal_infomation', this.setUserState, this);
+	      (0, _mongodb.readDB)('introduction', this.setInterestState, this);
 	    }
 	  }, {
 	    key: 'setUserState',
@@ -28048,6 +28049,14 @@
 	        position: info['position'],
 	        workplace: info['workplace'],
 	        label: info['label']
+	      });
+	    }
+	  }, {
+	    key: 'setInterestState',
+	    value: function setInterestState(self, data) {
+	      self.setState({
+	        interest: data[0]['interest'],
+	        good_thing: data.slice(1)
 	      });
 	    }
 	  }, {
@@ -28111,7 +28120,7 @@
 	              _react2.default.createElement(
 	                'h5',
 	                { className: 'condensed light' },
-	                'I interest in Game Development, Web Development, Artificial Intelligent and Android Development'
+	                this.state.interest
 	              )
 	            )
 	          ),
@@ -28122,63 +28131,47 @@
 	            left: _react2.default.createElement(
 	              'div',
 	              null,
-	              _react2.default.createElement('i', { className: 'mdi mdi-github-circle mdi-48px' }),
-	              _react2.default.createElement(
-	                'h4',
-	                { className: 'condensed light' },
-	                'Active'
-	              ),
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'condensed' },
+	              this.state.good_thing ? _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement('i', { className: "mdi " + this.state.good_thing[0]['icon'] + " mdi-48px" }),
 	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'light' },
-	                  'More than '
+	                  'h4',
+	                  { className: 'condensed light' },
+	                  this.state.good_thing[0]['title']
 	                ),
-	                'thousand countributions',
-	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'light' },
-	                  ' and More than '
-	                ),
-	                '25 respositories',
-	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'light' },
-	                  ' (including collaborating respositories) on Github in this year'
-	                )
-	              )
+	                _react2.default.createElement('p', { className: 'condensed', dangerouslySetInnerHTML: { __html: this.state.good_thing[0]['description'] } })
+	              ) : _react2.default.createElement('div', null)
 	            ),
 	            center: _react2.default.createElement(
 	              'div',
 	              null,
-	              _react2.default.createElement('i', { className: 'mdi mdi-code-braces mdi-48px' }),
-	              _react2.default.createElement(
-	                'h4',
-	                { className: 'condensed light' },
-	                'Experience'
-	              ),
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'condensed light' },
-	                'I have experience in many programming language and many framework since 2014 such as Java , Python , C# , Prolog , C++ , Javascript , Android , React , Django , Cocos2d-X , ETC.'
-	              )
+	              this.state.good_thing ? _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement('i', { className: "mdi " + this.state.good_thing[1]['icon'] + " mdi-48px" }),
+	                _react2.default.createElement(
+	                  'h4',
+	                  { className: 'condensed light' },
+	                  this.state.good_thing[1]['title']
+	                ),
+	                _react2.default.createElement('p', { className: 'condensed', dangerouslySetInnerHTML: { __html: this.state.good_thing[1]['description'] } })
+	              ) : _react2.default.createElement('div', null)
 	            ),
 	            right: _react2.default.createElement(
 	              'div',
 	              null,
-	              _react2.default.createElement('i', { className: 'mdi mdi-book-open-page-variant mdi-48px' }),
-	              _react2.default.createElement(
-	                'h4',
-	                { className: 'condensed light' },
-	                'Learner'
-	              ),
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'condensed light' },
-	                'I love to learn new thing or the thing that I didn\'t know before from content or course like Udemy or Codeacademy by doing it.'
-	              )
+	              this.state.good_thing ? _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement('i', { className: "mdi " + this.state.good_thing[2]['icon'] + " mdi-48px" }),
+	                _react2.default.createElement(
+	                  'h4',
+	                  { className: 'condensed light' },
+	                  this.state.good_thing[2]['title']
+	                ),
+	                _react2.default.createElement('p', { className: 'condensed', dangerouslySetInnerHTML: { __html: this.state.good_thing[2]['description'] } })
+	              ) : _react2.default.createElement('div', null)
 	            )
 	          })
 	        )
@@ -31015,7 +31008,7 @@
 	          _util.ParallaxSession,
 	          {
 	            id: 'intro',
-	            img: 'dist/medias/images/dummy1.png',
+	            img: 'dist/medias/images/skill-bg.jpg',
 	            height: '1000px'
 	          },
 	          _react2.default.createElement(
