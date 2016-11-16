@@ -31497,6 +31497,8 @@
 	
 	var _util = __webpack_require__(251);
 	
+	var _mongodb = __webpack_require__(240);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -31508,13 +31510,37 @@
 	var Info = function (_Component) {
 	  _inherits(Info, _Component);
 	
-	  function Info() {
+	  function Info(props) {
 	    _classCallCheck(this, Info);
 	
-	    return _possibleConstructorReturn(this, (Info.__proto__ || Object.getPrototypeOf(Info)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (Info.__proto__ || Object.getPrototypeOf(Info)).call(this, props));
+	
+	    _this.state = {};
+	    return _this;
 	  }
 	
 	  _createClass(Info, [{
+	    key: 'readDataFromDB',
+	    value: function readDataFromDB() {
+	      (0, _mongodb.readDB)('info_data', this.setDataState, this);
+	      (0, _mongodb.readDB)('footer', this.setFooterState, this);
+	    }
+	  }, {
+	    key: 'setDataState',
+	    value: function setDataState(self, data) {
+	      self.setState({ data: data });
+	    }
+	  }, {
+	    key: 'setFooterState',
+	    value: function setFooterState(self, data) {
+	      self.setState({ author: data[0]['author'], tools: data.slice(1) });
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.readDataFromDB();
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var style = {
@@ -31545,32 +31571,25 @@
 	                  'Download Infomation'
 	                )
 	              ),
-	              _react2.default.createElement(
+	              this.state.data ? _react2.default.createElement(
 	                'div',
-	                { className: 'row' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col s12' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'dist/medias/documents/Resume.pdf', className: 'btn waves-light wave-effect' },
-	                    'Download Resume'
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'row ' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col s12' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'dist/medias/documents/Transcripts.pdf', className: 'btn waves-light wave-effect' },
-	                    'Download Transcripts'
-	                  )
-	                )
-	              ),
+	                null,
+	                this.state.data.map(function (data) {
+	                  return _react2.default.createElement(
+	                    'div',
+	                    { key: data._id.$oid, className: 'row' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'col s12' },
+	                      _react2.default.createElement(
+	                        'a',
+	                        { href: data.path, className: 'btn waves-light wave-effect' },
+	                        "Download " + data.type
+	                      )
+	                    )
+	                  );
+	                })
+	              ) : _react2.default.createElement('div', null),
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'row', style: style },
